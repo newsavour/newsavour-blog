@@ -1,0 +1,28 @@
+name: '巴黎寻味 · NewSavour'
+pygments: true
+exclude: ['Rakefile', 'README.md', 'config.rb', '*.bat', '*.bak', 'scripts']
+permalink: /blog/:year/:month/:day/:title/
+relative_permalinks: false
+paginate: 10
+paginate_path: /blog/page:num
+
+# Custom config namespace
+custom_config:
+
+  navigation:
+    - text: Blog
+      url: /blog/
+#    - text: Pages
+#      url: /pages/
+
+  categories:
+    - slug: unclassified
+      text: '闲聊'
+
+  disqus:
+    id: newsavour-blog
+
+  google_analytics:
+    account: UA-356705-9
+    domain: newsavour.com
+

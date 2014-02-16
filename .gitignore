@@ -1,0 +1,11 @@
+.DS_Store
+
+*~
+*~.*
+*.bak
+*.bak.*
+*.log
+*.py[co]
+
+_site/
+
