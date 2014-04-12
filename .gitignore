@@ -1,11 +1,10 @@
-.DS_Store
+_site/
+.idea/
 
+.DS_Store
 *~
 *~.*
 *.bak
 *.bak.*
 *.log
 *.py[co]
-
-_site/
-
