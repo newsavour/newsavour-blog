@@ -10,10 +10,8 @@
     <!-- jQuery (from jQuery CDN) -->
     <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- Twitter Bootstrap 3 + Font Awesome (from BootstrapCDN) -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <!--link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/-->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <!-- Syntax highlighting and custom style -->
     <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/custom.css" rel="stylesheet" type="text/css"/>
@@ -40,10 +38,10 @@
 
   <body>
 
-    <header id="navbar" class="navbar navbar-default navbar-fixed-top" role="banner">
+    <header id="navbar" class="navbar navbar-inverse navbar-fixed-top" role="banner">
       <div class="container">
         <div class="navbar-header">
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".zz-navbar-collapse">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -51,7 +49,7 @@
           </button>
           <a class="navbar-brand" href="/">{{ site.name }}</a>
         </div>
-        <nav class="collapse navbar-collapse zz-navbar-collapse" role="navigation">
+        <nav class="collapse navbar-collapse js-navbar-collapse" role="navigation">
           <ul id="navbar-items" class="nav navbar-nav">
             {% for link in site.custom_config.navigation %}
               <li><a href="{{ link.url }}">{{ link.text }}</a></li>
@@ -86,8 +84,32 @@
 
     <div id="footer-wrapper">
       <div id="footer" class="container">
-        <p>Copyright &copy; 2013 {{ site.name }}. All Rights Reserved.</p>
+        <div class="row">
+          <div class="col-md-8">
+            <p>Copyright &copy; 2013-{{ site.time|date:"%Y" }} <a href="http://www.newsavour.com">{{ site.name }}</a>. All Rights Reserved.</p>
+            <ul class="list-unstyled">
+              <li>Built and designed by You-Know-Who</li>
+              <li>Last updated at {{ site.time|date:"%a, %d %b %Y, %H:%M:%S" }}</li>
+            </ul>
+          </div>
+          <div class="col-md-4 text-right">
+            <ul class="list-inline social-icons-grayscale">
+              <li><a href="http://www.weibo.com/vivelevendredi" title="微博: @巴黎寻味"><img src="/assets/img/weibo.png" alt="微博: @巴黎寻味"/></a></li>
+              <li><a id="email-link" href="#" title="给我们发邮件"><img src="/assets/img/email.png" alt="给我们发邮件"/></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <script type="text/javascript">//<![CDATA[
+        $(function() {
+          $('#email-link').click(function () {
+            var domain = '@newsavour.com';
+            var username = 'contact';
+            var mailto = 'mailto:' + username + domain;
+            $(this).attr('href', mailto);
+          });
+        });
+      //]]></script>
     </div>
 
   </body>
