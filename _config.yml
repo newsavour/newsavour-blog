@@ -17,6 +17,8 @@ custom_config:
 #      url: /pages/
 
   categories:
+    - slug: new-feature
+      text: '新功能'
     - slug: unclassified
       text: '闲聊'
 
