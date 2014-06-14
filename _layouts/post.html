@@ -9,8 +9,8 @@ layout: blog
   <div class="meta">
     <span class="text-muted">
       <span class="glyphicon glyphicon-edit"></span>
-      Posted {% if page.author %} by {{ page.author }} {% endif %}
-      on {{ page.date|date_to_string }}
+      {% if page.author %} {{ page.author }} , {% endif %}
+      {{ page.date|date_to_string }}
       {% if page.last_updated %} , last updated on {{ page.last_updated|date_to_string }} {% endif %}
     </span>
     &nbsp;

@@ -17,8 +17,10 @@ custom_config:
 #      url: /pages/
 
   categories:
-    - slug: new-feature
+    - slug: newfeatures
       text: '新功能'
+    - slug: stories
+      text: '寻味故事'
     - slug: unclassified
       text: '闲聊'
 
